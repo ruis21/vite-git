@@ -1,0 +1,22 @@
+import { useContext } from "react"
+import { ThemeContext } from "./ThemeContext"
+
+function FirstSection() {
+
+    const { isDark } = useContext(ThemeContext);
+    console.log('모드:', isDark);
+
+    return (
+        <div className="content"
+            style={
+                {
+                    backgroundColor: isDark ? '#683333ff' : '#f7ddddff',
+                    color: isDark ? '#fff' : '#333'
+                }
+            }>
+            <h2>첫번째 섹션</h2>
+        </div>
+    )
+}
+
+export default FirstSection
